@@ -1,0 +1,7 @@
+\section{\esp Terminologias}\label{terminologia}
+
+Neste capítulo serão apresentadas as terminologias e restrições utilizadas no Problema de Escalonamento e Roteamento de Enfermeiras. Utilizaremos o termo enfermeira para designar todos os profissionais de saúde envolvidos no \ac{PERE}. 
+
+O Problema de Escalonamento e Roteamento de Enfermeiras é definido por Rasmussenm et~al. da seguinte forma: seja $E = \{ e_1, e_2, \ldots, e_{|E|} \}$ um conjunto de enfermeiras no qual cada enfermeira $e\in E$ possui uma carga horária de trabalho $CH_e$, $P = \{p_1, p_2, \ldots, p_{|P|} \}$ um conjunto de pacientes, $S$ um conjunto de serviços $S = \{ s_1, s_2, \ldots, s_{|S|} \}$ e $D_{|P|\times |P|}$ uma matriz de distância. 
+
+Seja $\Delta$ um conjunto de pares ordenados de instantes de tempo nos quais cada elemento $[i_p, f_p] \in \Delta$ caracteriza uma janela de tempo. O instante de tempo $i_{p}$ representa o limite inferior de tempo para iniciar o atendimento ao paciente $p$ e $f_{p}$ representa o limite superior de tempo iniciar o atendimento ao paciente $p$. A função $f: S \rightarrow \Delta$ mapeia cada serviço de saúde a uma janela de tempo de atendimento. Cada visita realizada a um paciente $p$ deve acontecer dentro de uma janela de tempo $[i_{p},f_{p}]$, sendo que o serviço prestado pela enfermeira $e$ ao paciente $p$ tem a duração máxima definida por $t_s$, associado ao serviço $s \in S$.

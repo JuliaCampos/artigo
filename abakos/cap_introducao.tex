@@ -1,0 +1,54 @@
+\section{\esp Introdução \label{introducao}}
+
+%considerações iniciais
+O \ac{SAD} caracteriza-se como uma modalidade de assistência à saúde prestada em domicílio composta por um conjunto de ações de prevenção, reabilitação e tratamento de doenças.
+Esse tipo de serviço tem se tornado cada vez mais presente, oferecendo uma forma alternativa de atendimento às pessoas com quadro clínico estável e que necessitam de cuidados especializados, substituindo a internação hospitalar.
+
+Essa modalidade de assistência a saúde oferece maior comodidade aos pacientes, garantindo maior conforto, facilitando o apoio familiar, além de reduzir riscos de contaminação hospitalar e a lotação dos leitos nos hospitais.
+Por outro lado, o~\ac{SAD} apresenta alguns desafios para os profissionais de saúde, tais como a necessidade de deslocamento dos profissionais de saúde de forma  que todos os pacientes que estejam agendados para determinado dia sejam atendidos no tempo previsto, além do complexo planejamento das escalas de trabalho dos profissionais de saúde envolvidos no atendimento domiciliar \citeonline{Kergosien:2009}. 
+Visando atender pacientes em domicílio, é necessário definir rotas a serem seguidas pelos veículos do~\ac{SAD}, pois os caminhos a serem percorridos podem depender de alguns fatores, tal como a necessidade de urgência de algum paciente. 
+
+Devido ao complexo planejamento das escalas de trabalho dos profissionais e as dificuldades encontradas para completar todo o serviço diário no tempo previsto, sem exceder a carga horária dos profissionais de saúde. Dessa forma, o \ac{SAD} tem despertado o interesse de diversos pesquisadores, que definiram o problema relacionado à modalidade estudada como \ac{PERE}.
+O \ac{PERE} aborda de forma integrada o problema de roteamento de veículos e de escalonamento de enfermeiras, com o objetivo de desenvolver um cronograma de trabalho para o \ac{SAD}, de forma que cada enfermeira visite um conjunto de pacientes, faça uma pausa e finalize suas atividades previstas dentro de uma janela de tempo de trabalho pré definida. \cite{trabelsi:2012}. 
+Para satisfazer as restrições do \ac{PERE}, além de definir a escala de trabalho dos profissionais, é necessário definir rotas que serão seguidas pelos veículos do~\ac{SAD}, uma vez que a elaboração dos trajetos que serão seguidos dependem de alguns fatores, tal como a necessidade de urgência de algum paciente. 
+
+%Segundo \cite{Kergosien:2009} é possível reduzir o PERE ao Problema dos Múltiplos Caixeiros Viajantes, dessa forma, pode-se classificar o \ac{PERE} na classe de problemas NP-Difícil, portanto, é pouco provável que seja possível determinar um algoritmo polinomial para resolve-lo.
+Segundo \citeonline{Kergosien:2009} é possível reduzir o PERE ao Problema dos Múltiplos Caixeiros Viajantes, classificando-o então na classe de problemas NP-Difícil. Portanto, é pouco provável que seja possível determinar um algoritmo polinomial para resolve-lo.
+Apesar disso, de acordo com \citeonline{cheng:98}, \citeonline{bachouch:2010},\citeonline{tozlu:2016} e \citeonline{cattafi:2012}, o \ac{PERE} ainda é resolvido de forma manual em diversos países, o que pode acarretar em resultados insatisfatórios. 
+Por fim, é estimado em \citeonline{holm:2014} que os profissionais envolvidos no \ac{SAD} passam entre $18\%$ e $26\%$ da sua jornada de trabalho dentro do veículo realizando translados entre os pontos de atendimento, o que reforça a necessidade da utilização de técnicas de otimização como forma de abordagem.
+
+Devido a natureza do problema, diversos métodos para encontrar a melhor solução para o \ac{PERE} são encontrados na literatura. Com o objetivo de investigar de maneira formalizada, quais métodos vêm sendo desenvolvidos para solucioná-lo, encontrar  possíveis problemas de investigação existentes, garantindo a replicabilidade desta revisão e  auxiliando outros pesquisadores do tema no momento da obtenção de materiais de estudo, elaboramos uma \ac{RSL}.
+
+%Para verificar a necessidade da elaboração de uma \ac{RSL}, foram elaboradas pesquisas para buscar a existência de outra revisão da mesma natureza. 
+Nas pesquisas realizadas não foram encontradas outras \ac{RSL}, mas foram encontradas outras revisões de literatura, classificadas por \citeonline{Kitchenham:2007} como ad-hoc,  publicadas por \citeonline{fikar:2017} e \citeonline{mohamed:2017}.
+
+\subsection{\esp Revisões de Literatura Recentes}
+%revisões de literatura existentes
+
+A revisão de literatura escrita por \citeonline{fikar:2017} tem como propósito comparar diferentes objetivos, restrições e destacar as pesquisas futuras para o \ac{PERE}, para isto os autores compararam diversos artigos, até Outubro de 2015, não indicando a data do início da sua pesquisa. As buscas foram realizadas pelos autores a partir seguintes palavras chave: \textit{``Home Care'', ``Home Health Care'', ``Routing'' e ``Rcheduling''}. 
+A revisão de literatura desenvolvida por \citeonline{mohamed:2017} tem como objetivo analisar a literatura existente relativa ao \ac{PERE}, para isso o autor comparou  materiais de diferentes naturezas, tais como artigos científicos, capítulos de livros, teses, dissertações e relatórios técnicos, publicados entre 1997 e 2015, a partir das seguintes palavras chave: \textit{ ``Home Health Care'', ``Home Care'' ``Resource  Scheduling'',  ``Routing'' e ``Vehicle Routing Problem"}
+
+A partir dos resultados obtidos em sua revisão, foi afirmado por \citeonline{fikar:2017} que o \ac{PERE} foi primeiro estudado em 1974 a partir do artigo \textit{A Model for Community Nursing in a Rural County}, publicado por \citeonline{fernandez:1974}. Em suas pesquisas \citeonline{fikar:2017}, verificaram  que alguns artigos estão diretamente relacionados com o \ac{PRV} e as restrições mais consideradas incluem janelas de tempo, requisitos de habilidades e de tempo de trabalho.
+\citeonline{fikar:2017} destacaram, as seguintes técnicas de solução aplicadas ao \ac{PERE}: \textit{Adaptative Large Neighborhood Search, Variable Neighborhood Search, Branch and Price and cut, Discrete-Event-Simulation, Greedy Randomized Adaptive Search Procedure, Fuzzy Simulated Evolution Algorithm, Genetic Algorithm, Memetic Algorithm, Multi-Directional Local Search, Particle Swarm Optimization, Repeated Matching, Simulated Annealing, Scatter Search e Tabu Search}.
+
+\citeonline{mohamed:2017} classificaram as restrições relacionadas aos pacientes, a organização e aos profissionais como: temporais, de associação e geográficas. 
+Para os pacientes, as restrições temporais determinam a frequência de visitas, a janela de tempo do atendimento e as dependências temporais; as restrições de associação determinam as preferências dos pacientes, tais como: ser atendido sempre pela mesma enfermeira; as restrições geográficas estão associadas a localização do paciente, e são utilizadas para auxiliar no cálculo de estimativa de tempo de viagem. 
+Para a organização, as restrições temporais são utilizadas para realizar o planejamento de tempo; as restrições de associação são utilizadas para garantir a continuidade dos atendimentos até o final do tratamento; e as restrições geográficas são utilizadas para determinar a área de atendimento. 
+Para os profissionais, as restrições temporais são utilizadas para determinar as horas trabalhadas; as restrições de associação são determinadas a partir das habilidades de cada enfermeira; e as restrições temporais são utilizadas para determinar o local de cada atendimento.
+
+%por que elas não são revisões sistemáticas
+Apesar do trabalho publicado por \citeonline{fikar:2017} e \citeonline{mohamed:2017} descreverem as palavras chave utilizadas na elaboração da pesquisa, o limite superior de tempo no qual as pesquisas foram consideradas, as palavras chave utilizadas na pesquisa e da revisão publicada por \citeonline{mohamed:2017} definir os motores de busca que foram utilizados. 
+Segundo \citeonline{Kitchenham:2007}, ambos os trabalhos são classificados como revisões de literatura ad-hoc, pois não foram elaborados seguindo um protocolo formal para realizar a busca dos materiais, possuem objetivos abrangentes, não existe uma questão de pesquisa a ser respondida ao final da revisão, não foram elaboradas strings de busca nem critérios para inclusão e exclusão dos estudos retornados na pesquisa. 
+
+Além da Revisão Sistemática de Literatura, este artigo traz como contribuição materiais não retornados na busca das revisões pesquisadas anteriormente, além de enfatizar estudos de caso relevantes desenvolvidos por pesquisadores em conjunto com o governo local ou empresas privadas e destacar as métricas e metodologias mais empregadas por pesquisadores para solucionar o \ac{PERE}.
+
+%organização do artigo
+
+Este artigo está organizado da seguinte forma:  Na Seção~\ref{protocolo} é apresentado o protocolo da revisão sistemática de literatura. Na Seção~\ref{terminologia}  são apresentadas as terminologias relacionadas ao PERE que são utilizadas também ao longo do texto. Na Seção~\ref{pad} são apresentadas as métricas utilizadas para avaliar as soluções do \ac{PERE}. Na Seção~\ref{metodologia}  foram descritas as metodologias mais utilizadas. Na Seção~\ref{aplicacoes} são apresentados os comparativos do \ac{PERE} com outros problemas. Na Seção~\ref{casos} listamos alguns estudos de casos e discutimos alguns problemas com características únicas, e finalizando o artigo, na Seção~\ref{conclusão} são apresentadas as considerações finais.
+
+
+
+
+
+
+

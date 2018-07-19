@@ -1,0 +1,48 @@
+\section{\esp Metodologias utilizadas }\label{metodologia}
+
+Com o objetivo de encontrar boas soluções para o \ac{PERE}, foram utilizadas diversas técnicas, como \acl{PLI}, Programação por Restrições, Enxame de Partículas e Algoritmos Genéticos, além de meta heurísticas.
+Entre as técnicas mais utilizadas, destaca-se a Programação Linear Inteira, encontrado em 57,9\% dos estudos realizados, sendo seguido pela Programação por Restrições, além de algumas heurísticas e meta heurísticas baseadas em Algoritmos Genéticos e Enxame de Partículas, como mostrado na Tabela~\ref{tecnicas}. 
+
+\begin{table}[ht]
+\centering
+\caption{Métodos identificados}
+\label{tecnicas}
+\begin{tabular}{c|c}
+\hline
+\textbf{Referências}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          & \textbf{Técnicas utilizadas} \\ \hline
+\begin{tabular}[c]{@{}c@{}}
+\cite{tozlu:2016}      \\
+\cite{goos:2015}        \\
+\cite{cheng:98}          \\
+\cite{Decerle:2016}       \\
+\cite{calvo:2013}          \\
+\cite{trabelsi:2012}      \\ 
+\cite{bachouch:2010}       \\ 
+\cite{tricoire:2016}        \\ 
+\cite{Kergosien:2009}        \\
+\cite{Bertels:2006}           \\
+\cite{rasmussenm:2012}         \\
+\cite{Bierwirth:2013}           \\ 
+\cite{trautsamwieser:2014}       \\
+\end{tabular} & Programação Linear Inteira   \\ \hline
+\begin{tabular}[c]{@{}c@{}}
+\cite{cattafi:2012} \\
+\cite{urli:2014} \\
+\cite{Bertels:2006}\\
+\end{tabular}                                                                                                                                                                                                                                                                                                                                                                                                                                                       & Programação por Restrições   \\ \hline
+\begin{tabular}[c]{@{}c@{}}
+\cite{mutingi:2013} \\ 
+\cite{drake:2007}
+\end{tabular}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             & Enxame de partículas         \\ \hline
+\begin{tabular}[c]{@{}c@{}}
+\cite{luna:2013} \\ 
+\cite{nguyen:2016}\end{tabular}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               & Algoritmos evolutivos        \\ \hline
+\end{tabular}
+\end{table}
+
+A partir dos dados apresentados anteriormente, podemos concluir que a \ac{PLI} tem sido a técnica mais utilizada na obtenção de resultados para o \ac{PERE}, retornando bons resultados quando testada com pequenas e médias instâncias, já que a técnica de Programação por Restrições tem se mostrado como a segunda alternativa mais estudada, trazendo bons resultados para a solução de problemas de escalonamento e roteamento.
+Bons resultados pra instâncias grandes foram encontrados por \citeonline{nguyen:2016}, com a utilização de Algoritmos Evolutivos.
+
+Além das técnicas utilizadas separadamente, para a obtenção de melhores resultados, alguns pesquisadores, obtiveram bons resultados ao combinar as técnicas de Programação Linear Inteira com  Programação por Restrições, como elaborado por \cite{Bertels:2006}. 
+
+De modo geral, os métodos exatos tem sido muito utilizados, o que deixa uma oportunidade para a utilização de heurísticas e meta heurísticas para solucionar o \ac{PERE} e para tratar de instâncias de grande porte.

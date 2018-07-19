@@ -1,0 +1,103 @@
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+\usepackage{flushend}
+\usepackage[brazil]{babel} 
+\usepackage[utf8]{inputenc} %Palavras em português
+\usepackage{acronym}
+\usepackage{float}    
+% \usepackage{amssymb}
+%\usepackage{setspace}
+%\renewcommand{\baselinestretch}{2}
+%\pagenumbering{roman} % Numeracao de pagina
+
+\acrodef{SAD}{Serviço de Atenção Domiciliar}
+\acrodef{PERE}{Problema de Escalonamento e Roteamento de Enfermeiras}
+\acrodef{PCV}{Problema do Caixeiro Viajante}
+\acrodef{PCVJT}{Problema do Caixeiro Viajante com Janelas de Tempo}
+\acrodef{PRV}{Problema de Roteamento de Veículos}
+\acrodef{PMCVJT}{Problema dos Múltiplos Caixeiros Viajantes com Janela de Tempo}
+\acrodef{PRVJT}{Problema de Roteamento de Veículos com Janelas de Tempo}
+\acrodef{PEE}{Problema de Escalonamento de Enfermeiras}
+\acrodef{RSL}{Revisão Sistemática de Literatura}
+\acrodef{PLI}{Programação Linear Inteira}
+
+%gerador de grafico no windows - https://easylatek.blogs.sapo.pt/6633.html 
+%Desenha simbolos latex  - http://detexify.kirelabs.org/classify.html
+    
+\begin{document}
+
+\title{O Problema de Roteamento e Escalonamento de Enfermeiras: Uma Revisão Sistemática de Literatura\\
+%{\footnotesize \textsuperscript{*}Note: Sub-titles are not captured in Xplore andshould not be used}
+%\thanks{Identify applicable funding agency here. If none, delete this.}
+}
+
+% \author{\IEEEauthorblockN{1\textsuperscript{st} Given Name Surname}
+% \IEEEauthorblockA{\textit{dept. name of organization (of Aff.)} \\
+% \textit{name of organization (of Aff.)}\\
+% City, Country \\
+% email address}
+% \and
+% \IEEEauthorblockN{2\textsuperscript{nd} Given Name Surname}
+% \IEEEauthorblockA{\textit{dept. name of organization (of Aff.)} \\
+% \textit{name of organization (of Aff.)}\\
+% City, Country \\
+% email address}
+% \and
+% \IEEEauthorblockN{3\textsuperscript{rd} Given Name Surname}
+% \IEEEauthorblockA{\textit{dept. name of organization (of Aff.)} \\
+% \textit{name of organization (of Aff.)}\\
+% City, Country \\
+% email address}
+% \and
+% \IEEEauthorblockN{4\textsuperscript{th} Given Name Surname}
+% \IEEEauthorblockA{\textit{dept. name of organization (of Aff.)} \\
+% \textit{name of organization (of Aff.)}\\
+% City, Country \\
+% email address}
+% \and
+% \IEEEauthorblockN{5\textsuperscript{th} Given Name Surname}
+% \IEEEauthorblockA{\textit{dept. name of organization (of Aff.)} \\
+% \textit{name of organization (of Aff.)}\\
+% City, Country \\
+% email address}
+% \and
+% \IEEEauthorblockN{6\textsuperscript{th} Given Name Surname}
+% \IEEEauthorblockA{\textit{dept. name of organization (of Aff.)} \\
+% \textit{name of organization (of Aff.)}\\
+% City, Country \\
+% email address}
+% }
+
+\maketitle
+
+\begin{abstract}
+O Problema de Escalonamento e Roteamento de Enfermeiras é um problema de Otimização Combinatória, que consiste em resolver de forma integrada o problema de roteamento de veículos e o problema escalonamento das equipes de enfermeiras respeitando regras contratuais e preferências pessoais das enfermeiras e dos pacientes. Este problema vêm despertando o interesse em diversos pesquisadores e neste artigo apresentamos uma revisão sistemática de literatura do tema tendo como objetivo reportar de maneira formalizada as principais técnicas de solução que foram publicadas nos últimos anos, descrever lacunas de pesquisa a serem investigados e garantir a replicabilidade desta revisão.
+\end{abstract}
+
+% \begin{IEEEkeywords}
+% Serviço de Atenção Domiciliar, Otimização Combinatória, Roteamento de Veículos, Escalonamento de Enfermeiras, Revisão Sistemática de Literatura.
+% \end{IEEEkeywords}
+
+\input{Introducao}
+\input{Terminologias}
+\input{PAD}
+\input{Metodologias}
+\input{Aplicacoes}
+\input{Estudos_de_caso}
+\input{conclusao}
+
+%\section*{References}
+
+
+\bibliographystyle{IEEEtran}
+\bibliography{biblio}
+
+\end{document}

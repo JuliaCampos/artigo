@@ -1,0 +1,150 @@
+\documentclass[a4paper,12pt,Times]{article}
+\usepackage{abakos}  %pacote com padrão da Abakos baseado no padrão da PUC
+\usepackage{acronym}
+\usepackage{tabularx}
+\usepackage{float}
+
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+\acrodef{SAD}{Serviço de Atenção Domiciliar}
+\acrodef{PERE}{Problema de Escalonamento e Roteamento de Enfermeiras}
+\acrodef{PCV}{Problema do Caixeiro Viajante}
+\acrodef{PCVJT}{Problema do Caixeiro Viajante com Janelas de Tempo}
+\acrodef{PRV}{Problema de Roteamento de Veículos}
+\acrodef{PMCVJT}{Problema dos Múltiplos Caixeiros Viajantes com Janela de Tempo}
+\acrodef{PRVJT}{Problema de Roteamento de Veículos com Janelas de Tempo}
+\acrodef{PEE}{Problema de Escalonamento de Enfermeiras}
+\acrodef{RSL}{Revisão Sistemática de Literatura}
+\acrodef{PLI}{Programação Linear Inteira}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Capa da revista
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\setcounter{page}{80} %iniciar contador de pagina de valor especificado
+\newcommand{\monog}{O Problema de Roteamento e Escalonamento de Enfermeiras: Uma Revisão Sistemática de Literatura}
+\newcommand{\monogES}{Model magazine Abakos ICEI the PUC Minas}
+\newcommand{\tipo}{Artigo}  % Especificar a seção tipo do trabalho: Artigo, Resumo, Tese, Dociê etc
+\newcommand{\origem}{Brasil}
+\newcommand{\editorial}{\textbf{Abakos}, Belo Horizonte,v. 1, n. 1, p. 00-00, Jul. 2013 - ISSN: 2175-5841}  % p. xx-xx – páginas inicial-final do artigo
+% \newcommand{\lcc}{\scriptsize{Licença Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported}}
+
+%%%%%%%%%%%%%%%%%INFORMAÇÕES SOBRE AUTOR PRINCIPAL %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\AutorA}{}
+ \newcommand{\funcaoA}{}
+ \newcommand{\emailA}{}
+ \newcommand{\cursA}{}
+% 
+% \newcommand{\AutorB}{Fernando José Rodrigues Cordeiro}
+% \newcommand{\funcaoB}{Bacharel em Sistemas de Informação}
+% \newcommand{\emailB}{fernandocordeiro@pucminas.br}
+% \newcommand{\cursB}{Instituto de Ciências Exatas e de Informática da PUC Minas}
+% 
+% \newcommand{\AutorC}{Giovanni Candido da Silva}
+% \newcommand{\funcaoC}{Bacharel em Sistemas de Informação}
+% \newcommand{\emailC}{giovanni@pucminas.br}
+% \newcommand{\cursC}{Instituto de Ciências Exatas e de Informática da PUC Minas}
+
+% Definir macros para o nome da Instituição, da Faculdade, etc.
+\newcommand{\univ}{}
+
+\newcommand{\keyword}[1]{\textsf{#1}}
+
+\begin{document}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %% Pagina de titulo
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{flushleft}
+
+\begin{minipage} [c][5cm][b]{16.5cm} % a primeira minipágina tem uma altura de 1.5cm e uma largura de 2.3cm.
+% comando que introduz o logo da escola que nesta altura já terá de estar na pasta imagens que 
+%por sua vez está na pasta onde se guardou o arquivo tex. E introduzimos essa imagem com a mesma altura da minipage.
+\includegraphics[scale=2.8]{figuras/pucmg.png} 
+\end{minipage}
+
+%  \vspace{0cm} {
+%  \singlespacing \Large{\monog \symbolfootnote[1]{Artigo apresentado à Revista Abakos} \\ }
+%   \normalsize{\monogES}
+%  }
+\end{flushleft}
+
+%\begin{flushright}
+%\singlespacing 
+%\normalsize{\AutorA \footnote{\funcaoA \cursA, \origem -- \emailA }} \\
+% \normalsize{\AutorB \footnote{\funcaoB, E-mail:\emailB \\ \cursB, \origem. }} \\
+% \normalsize{\AutorC \footnote{\funcaoC, E-mail:\emailC \\ \cursC, \origem. }} \\
+% \normalsize{\AutorD \footnote{\funcaoD \\ Pais de origem: \origemD. E-mail: \emailD}} \\
+%deixar com o valor `0` e usar o '*' no inicio da frase
+% \symbolfootnote[0]{Artigo recebido em 10 de julho de 1983 e aprovado em 29 de maio 2012}
+%\end{flushright}
+\thispagestyle{empty}
+
+\begin{abstract}
+\noindent
+% O resumo deverá conter pelo menos cento e cinquenta palavras de acordo com o padrão de normalização da ABNT.
+% O resumo deverá conter pelo menos cento e cinquenta palavras de acordo com o padrão de normalização da ABNT.
+
+% O Problema de Escalonamento e Roteamento de Enfermeiras é um problema de Otimização Combinatória, que consiste em resolver de forma integrada o problema de roteamento de veículos e de escalonamento de dos profissionais de saúde, respeitando regras contratuais e preferências pessoais das enfermeiras e dos pacientes. Este problema vêm despertando o interesse em diversos pesquisadores. Neste artigo será apresentado uma revisão sistemática de literatura com o objetivo de reportar de maneira formalizada as principais técnicas de solução publicadas nos últimos anos, descrever lacunas de pesquisa a serem investigadas e garantir a replicabilidade desta revisão.
+
+O Problema de Escalonamento e Roteamento de Enfermeiras é um problema de Otimização Combinatória, que consiste em resolver de forma integrada o problema de roteamento de veículos e escalonamento de profissionais de saúde do Serviço de Atenção Domiciliar, respeitando além das regras contratuais, as preferências pessoais das enfermeiras e dos pacientes. 
+O Problema de Escalonamento de Enfermeira consiste em desenvolver um cronograma de trabalho para profissionais da área de saúde, de forma a satisfazer a um conjunto de restrições.
+O Problema de Roteamento de Veículos consiste em elaborar rotas para veículos, de forma encontrar o caminho de menor custo.
+Devido as dificuldades encontradas pelas empresas para gerenciar esse serviço, este tema vêm despertando o interesse em diversos pesquisadores. Neste artigo será apresentado uma revisão sistemática de literatura, com o objetivo de reportar, a partir da elaboração e utilização de um protocolo de pesquisa, as principais técnicas de solução publicadas nos últimos anos, descrever lacunas de pesquisa a serem investigados e garantir a replicabilidade desta revisão. 
+
+% \\\textbf{\keyword{Palavras-chave: }} Template. \LaTeX. Abakos. Periódicos.
+\end{abstract}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage 
+\selectlanguage{english}
+\begin{abstract}
+\noindent
+
+% The Home Health Care Routing Scheduling Problem is a Combinatorial Optimization Problem, which solves the Vehicle Routing Problem integrated with the Nursing  Scheduling Problem while satisfying contractual rules and personal preferences of home care workers and patients. This problem has attracted the attention of several researchers. In this article, will be presented a systematic review of the literature of the subject aiming to formally report the main solution techniques that have been published in recent years, highlight research gaps to be investigated and ensure replicability this review.%\footnote{TODO: Em geral, nursing é uilizado para mencionar todos os tipos de profissionais de saúde. Procurar referências que confirmem esta afirmação. - Pessoas que usam o termo home care worker: \cite{drake:2007}, \cite{rasmussenm:2012}, \cite{goos:2015} usa o termo "caregivers"}
+% \\\textbf{\keyword{Keywords: }} Template. \LaTeX. Abakos. Periodics.
+
+The Home Health Care Routing and Scheduling Problem is a Combinatorial Optimization problem, which consists of resolving in an integrated way the problem of vehicle routing and scheduling of health professionals of the Home Care Service, respecting contractual rules and preferences of nurses and patients.
+The Nurse Scheduling Problem consists of developing a work schedule for health professionals in order to satisfy a set of restrictions.
+The Vehicle Routing Problem consists of develop routes to vehicles, so finding the lowest cost path.
+ Due to the difficulties encountered by companies to manage this service, this topic has been attracting interest in several researchers. This article will present a systematic literature review, with the objective of reporting, based on the elaboration and use of a research protocol, the main solution techniques published in the last years, describing research gaps to be investigated and ensuring the replicability of this review.
+
+\end{abstract}
+
+\selectlanguage{brazilian}
+ \onehalfspace  % espaçamento 1.5 entre linhas
+ \setlength{\parindent}{1.25cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% INICIO DO TEXTO
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\include{textos}
+%\include{cap_introducao}
+%\input{cap_protocolo}
+%\input{cap_terminologia}
+%\input{cap_metricas}
+%\input{cap_Metodologias_utilizadas}
+%\input{cap_comparativo}
+%\input{cap_estudo_de_caso}
+%\input{cap_conclusao}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% FIM DO TEXTO
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \selectlanguage{brazil}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Inicio bibliografia
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+ \newpage
+ \singlespace{
+ \bibliographystyle{abntex2-alf}
+ \bibliography{bibliografia}
+
+ }
+
+\end{document}

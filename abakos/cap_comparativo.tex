@@ -1,0 +1,23 @@
+\section{\esp Comparativos com outros problemas } \label{aplicacoes}
+
+%definir problemas como grafo
+O \ac{PERE} é um problema pertencente a classe NP-Difícil, podendo ser reduzido ao Problema dos Múltiplos Caixeiros Viajantes \citeonline{Kergosien:2009}. Considerando que o \ac{PCV} pode ser reduzido ao \ac{PRV}, por transitividade, o \ac{PERE} também pode ser reduzido ao \ac{PRV} com restrições trabalhistas e de janela de tempo. 
+
+A seguir serão apresentados os problemas relacionados ao \ac{PERE}, como o \ac{PCV} e o \ac{PRV} e algumas aplicações do \ac{PRVJT}. O \ac{PCV}, assim como o \ac{PRV} consistem em determinar a menor distância em um Circuíto Hamiltoniano. sendo definidos matematicamente  a partir de um grafo $G$, no qual cada aresta possui um custo $c_{ij}$ associado.
+
+Em geral, modelos para o \ac{PCV} e o \ac{PRV} apresentam a seguinte função objetivo:
+
+\begin{center}
+$Min~\sum c_{ij}x_{ij}$
+\end{center}
+
+Onde $x_{ij}$ é uma variável de decisão com valor 1 se existe uma aresta unindo os vértices $i$ e $j$.
+
+Foram definidos por \citeonline{Kergosien:2009} e \citeonline{gilbert:1992} o \ac{PMCVJT} e o \ac{PRVJT}, como extensão do \ac{PCV} e do \ac{PRV}.
+Em sua definição, os autores ressaltaram a existência de uma janela de tempo $[e_i, l_i]$ representando o limite inferior e superior para o início de uma atividade.
+
+Assim como os problemas citados anteriormente, o \ac{PERE} possui como um de seus objetivos a redução da distância percorrida, além disso, esse problema também possui outros objetivos, tais como a redução da carga horária total das enfermeiras e a preocupação com a maximização da satisfação das enfermeiras e dos pacientes.
+
+\subsection{Aplicações do Problema de Roteamento de Veículos com Janela de Tempo}
+
+Existem diversas aplicações do \ac{PRVJT}, tais como: entregas relacionadas a serviços bancários, entrega de encomendas, coletas de lixo industrial e roteamento de ônibus escolares. Para o último, deve-se definir um roteiro a ser seguido pelo ônibus, respeitando o horário mínimo de chegada no ponto de encontro com o aluno (limite inferior de tempo) e o horário máximo de espera pelo aluno (limite superior de tempo). Nesse problema, não existem restrições de satisfatibilidade como no \ac{PERE}, pois o objetivo é realizar o transporte dos alunos em tempo cabível.
